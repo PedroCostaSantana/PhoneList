@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "549c2cdd-58c1-4615-9f2a-a01f29a96efa",
+		"name": "PhoneList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllContacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44340/api/contacts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44340",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetContactByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44340/api/contacts/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44340",
+					"path": [
+						"api",
+						"contacts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostContact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pedro Santana\",\r\n    \"number\": \"7458633680\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44340/api/contacts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44340",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteContactByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44340/api/contacts/11",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44340",
+					"path": [
+						"api",
+						"contacts",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditContact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 12,\r\n    \"name\": \"Pedro Santana\",\r\n    \"number\": \"915263487\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44340/api/contacts/12",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44340",
+					"path": [
+						"api",
+						"contacts",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

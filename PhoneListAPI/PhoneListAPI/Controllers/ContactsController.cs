@@ -42,6 +42,20 @@ namespace PhoneListAPI.Controllers
             return phoneList;
         }
 
+        // GET: api/findContactByName?name={}
+        [HttpGet("findContactByName")]
+        public async Task<ActionResult<PhoneList>> Get([FromQuery] string name)
+        {
+            var contacts = await _context.PhoneList.Where(p => p.Name.Contains(name)).ToListAsync();
+
+            if(contacts == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(contacts);
+        }
+        
         // PUT: api/PhoneLists/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPhoneList(int id, PhoneList phoneList)

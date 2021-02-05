@@ -125,6 +125,17 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "FindContactByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
 		}
 	]
 }

@@ -85,17 +85,17 @@ namespace PhoneListWPF
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var id = txtSearch.Text.Trim();
+            var name = txtSearch.Text.Trim();
 
-            var url = "api/contacts/" + id;
+            var url = "api/contacts/findContactByName?name=" + name;
 
             HttpResponseMessage response = client.GetAsync(url).Result;
 
             if (response.IsSuccessStatusCode)
             {
-                var contacts = response.Content.ReadAsAsync<Contacts>().Result;
-
-                MessageBox.Show("User Found : " + contacts.Name + " " + contacts.Number);
+                var contacts = response.Content.ReadAsAsync<IEnumerable<Contacts>>().Result;
+                contactgrid.ItemsSource = contacts;
+                txtSearch.Text = "Name";
             }
             else
             {
@@ -117,6 +117,7 @@ namespace PhoneListWPF
             if (response.IsSuccessStatusCode)
             {
                 MessageBox.Show("User Deleted");
+                txtDelete.Text = "Id";
                 GetData();
             }
             else
@@ -125,5 +126,9 @@ namespace PhoneListWPF
             }
         }
 
+        private void btnShowAll_Click(object sender, RoutedEventArgs e)
+        {
+            GetData();
+        }
     }
 }

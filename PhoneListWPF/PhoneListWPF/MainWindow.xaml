@@ -5,50 +5,149 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhoneListWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="425" Width="525">
-    <Grid>
-        <Grid Margin="0,0,-8,-122">
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Title="Phone List" 
+        Icon="./phone.png"
+        MinHeight="300" MinWidth="680"
+        ResizeMode="NoResize"
+        MaxHeight="300" 
+        MaxWidth="680"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Grid Margin="0,1,-8,-123">
+            
+            <!--Data Grid-->
 
             <DataGrid Name="contactgrid" 
-        HorizontalAlignment="Left" Margin="28,23,0,0" 
+                 HorizontalAlignment="Left" 
+                 Margin="299,21,0,0" 
                  AutoGenerateColumns="True" 
-                 VerticalAlignment="Top" Height="217" Width="470"/>
+                 VerticalAlignment="Top" 
+                 Height="217" Width="358"
+                 CanUserAddRows="False"
+                 CanUserDeleteRows="False"
+                 CanUserResizeRows="False"
+                 CanUserReorderColumns="False"
+                 CanUserSortColumns="False"
+                 IsReadOnly="True"/>
 
-            <Label Content="Contact Name" HorizontalAlignment="
-        Left" Margin="28,256,0,0" VerticalAlignment="Top" 
-        RenderTransformOrigin="-0.085,-0.243"/>
-            <TextBox x:Name="txtName" HorizontalAlignment="Left" 
-        Height="23" Margin="119,259,0,0" TextWrapping="Wrap" 
-        VerticalAlignment="Top" Width="120"/>
+            <!--Name Label-->
 
-            <Label Content="Phone" HorizontalAlignment="Left" 
-        Margin="246,256,0,0" VerticalAlignment="Top" 
-        RenderTransformOrigin="-0.085,-0.243"/>
-            <TextBox x:Name="txtPhone" HorizontalAlignment="Left" 
-        Height="23" Margin="290,259,0,0" TextWrapping="Wrap" 
-        VerticalAlignment="Top" Width="120"/>
+            <Label 
+                Content="Name" 
+                HorizontalAlignment="Left" 
+                Margin="10,23,0,0" 
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="-0.085,-0.243"/>
 
-            <Button Content="Add User" HorizontalAlignment="Left" 
-        Margin="423,261,0,0" VerticalAlignment="Top" 
-        Width="75" Click="Button_Click_1"/>
+            <!--Name TextBox-->
 
-            <TextBox HorizontalAlignment="Left" Height="23" 
-        Margin="117,310,0,0" TextWrapping="Wrap" x:Name="txtSearch" 
-        Text="" VerticalAlignment="Top" Width="120"/>
-            <Button Content="Search ID" HorizontalAlignment="Left" 
-        Margin="253,310,0,0" VerticalAlignment="Top" 
-        Width="75" x:Name="btnSearch" Click="btnSearch_Click"/>
-            <Button Content="Show All" HorizontalAlignment="Left" 
-        Margin="335,310,0,0" VerticalAlignment="Top" 
-        Width="75" x:Name="btnShowAll"/>
+            <TextBox 
+                x:Name="txtName" 
+                HorizontalAlignment="Left" 
+                Height="23" 
+                Margin="55,21,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="120"/>
 
-            <TextBox HorizontalAlignment="Left" Height="23" 
-        Margin="117,347,0,0" TextWrapping="Wrap" Text="" 
-        VerticalAlignment="Top" Width="120" x:Name="txtDelete"/>
-            <Button Content="Delete" HorizontalAlignment="Left" 
-        Margin="253,350,0,0" VerticalAlignment="Top" 
-        Width="75" x:Name="btnDelete" Click="btnDelete_Click"/>
+            <!--Phone Label-->
 
+            <Label 
+                Content="Phone" 
+                HorizontalAlignment="Left" 
+                Margin="10,57,0,0" 
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="-0.085,-0.243"/>
+
+            <!--Phone TextBox-->
+
+            <TextBox 
+                x:Name="txtPhone" 
+                HorizontalAlignment="Left" 
+                Height="23" 
+                Margin="55,51,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="120"/>
+
+            <!--Add User Button-->
+
+            <Button 
+                Content="Add User" 
+                HorizontalAlignment="Left" 
+                Margin="189,32,0,0" 
+                VerticalAlignment="Top" 
+                Width="94" 
+                Click="Button_Click_1" 
+                Height="44"/>
+
+            <!--Search TextBox-->
+
+            <TextBox 
+                HorizontalAlignment="Left" 
+                Height="23" 
+                Margin="10,106,0,0" 
+                TextWrapping="Wrap" 
+                x:Name="txtSearch" 
+                Text="Name" 
+                VerticalAlignment="Top" 
+                Width="165"/>
+
+            <!--Search Button-->
+
+            <Button 
+                Content="Search" 
+                HorizontalAlignment="Left" 
+                Margin="189,100,0,0" 
+                VerticalAlignment="Top" 
+                Width="94" 
+                x:Name="btnSearch" 
+                Click="btnSearch_Click"/>
+
+            <!--Delete TextBox-->
+
+            <TextBox 
+                HorizontalAlignment="Left" 
+                Height="23" 
+                Margin="10,162,0,0" 
+                TextWrapping="Wrap" 
+                Text="Id" 
+                VerticalAlignment="Top" 
+                Width="165" 
+                x:Name="txtDelete"/>
+
+            <!--Delete Button-->
+
+            <Button 
+                Content="Delete" 
+                HorizontalAlignment="Left" 
+                Margin="189,153,0,0" 
+                VerticalAlignment="Top" 
+                Width="94" 
+                x:Name="btnDelete" 
+                Click="btnDelete_Click"/>
+
+            <!--ShowAll Button-->
+
+            <Button 
+                Content="Show All"
+                HorizontalAlignment="Left" 
+                Margin="110,206,0,0" 
+                VerticalAlignment="Top" 
+                Width="92" 
+                x:Name="btnShowAll" 
+                Click="btnShowAll_Click" 
+                Style="{StaticResource MaterialDesignFlatAccentBgButton}"/>
         </Grid>
-    </Grid>
+    </StackPanel>
 </Window>

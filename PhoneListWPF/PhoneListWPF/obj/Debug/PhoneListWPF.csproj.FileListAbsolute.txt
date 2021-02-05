@@ -70,3 +70,9 @@ C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\bin\Debug\System.
 C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\bin\Debug\System.ValueTuple.xml
 C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\obj\Debug\PhoneListWPF.csproj.CoreCompileInputs.cache
 C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\obj\Debug\PhoneListWPF.csproj.CopyComplete
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\bin\Debug\MaterialDesignColors.dll
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\bin\Debug\MaterialDesignColors.pdb
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListWPF\PhoneListWPF\obj\Debug\App.baml

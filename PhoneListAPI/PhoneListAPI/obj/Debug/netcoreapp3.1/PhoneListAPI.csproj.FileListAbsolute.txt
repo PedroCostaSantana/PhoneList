@@ -154,3 +154,8 @@ C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\bin\Debug\netcore
 C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\z0049kuh\Desktop\Phone_List\PhoneListAPI\PhoneListAPI\obj\Debug\netcoreapp3.1\PhoneListAPI.MvcApplicationPartsAssemblyInfo.cs

@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="DevFinances" title="Happy" src="https://i.imgur.com/erAgJJS.png" />
+    <img alt="DevFinances" title="Happy" src="https://i.imgur.com/f2DkTt6.png" />
 </h1>
 
 <p align="center">

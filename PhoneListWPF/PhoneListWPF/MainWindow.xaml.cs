@@ -62,11 +62,33 @@ namespace PhoneListWPF
             contact.Name = txtName.Text;
             contact.Number = txtPhone.Text;
 
+            int number;
+            bool parseNumber = Int32.TryParse(contact.Number, out number);
+            bool validateNumber = number.ToString().Length == 9;
+
+            if (string.IsNullOrWhiteSpace(contact.Name) || string.IsNullOrWhiteSpace(contact.Number))
+            {
+                MessageBox.Show("Must fill in all fields");
+                return;
+            }
+            else if (!parseNumber)
+            {
+                MessageBox.Show("The number can only contain numbers");
+                return;
+            }
+            else if (!validateNumber)
+            {
+                MessageBox.Show("The number must be 9 characters");
+                return;
+            }
+            
+            
+
             var response = client.PostAsJsonAsync("api/contacts", contact).Result;
 
             if (response.IsSuccessStatusCode)
             {
-                MessageBox.Show("User Added");
+                MessageBox.Show("Contact Added");
                 txtName.Text = "";
                 txtPhone.Text = "";
                 GetData();
@@ -94,8 +116,17 @@ namespace PhoneListWPF
             if (response.IsSuccessStatusCode)
             {
                 var contacts = response.Content.ReadAsAsync<IEnumerable<Contacts>>().Result;
-                contactgrid.ItemsSource = contacts;
-                txtSearch.Text = "Name";
+                int contactCount = contacts.Count();
+                if(contactCount == 0)
+                {
+                    MessageBox.Show("No contacts found");
+                    return;
+                }
+                else
+                {
+                    contactgrid.ItemsSource = contacts;
+                    txtSearch.Text = "Name";
+                }
             }
             else
             {
@@ -116,7 +147,7 @@ namespace PhoneListWPF
 
             if (response.IsSuccessStatusCode)
             {
-                MessageBox.Show("User Deleted");
+                MessageBox.Show("Contact Deleted");
                 txtDelete.Text = "Id";
                 GetData();
             }

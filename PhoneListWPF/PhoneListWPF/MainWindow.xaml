@@ -83,7 +83,7 @@
             <!--Add User Button-->
 
             <Button 
-                Content="Add User" 
+                Content="Add" 
                 HorizontalAlignment="Left" 
                 Margin="189,32,0,0" 
                 VerticalAlignment="Top" 
